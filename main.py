@@ -19,19 +19,20 @@ def randLearn(epoch):
             moveorder[counter] = move  # adds that move to the list
             print('MoveOrder:', moveorder)
             counter = counter + 1  # adds 1 to the counter
-            #over = gameOver(moveorder)  # checks to see if the game is over
+            over = gameOver(moveorder)  # checks to see if the game is over
             print("   ")
             if counter == 9:
                 over = True
         inputs[i] = moveorder #adding the moveorder array to the inputs array
-        #result = gameResult(moveorder)  # result is either win for X(1), win for O(-1) or draw(0)
+        outputs[i] = gameResult(moveorder) #adds the result to the list of results
 
-def gameOver():
-    pass
+def gameOver(moveOrder):
+    over = False
+    return over
 
-
-def gameResult():
-    pass
+def gameResult(moveOrder):
+    result = 0
+    return result
 
 
 class NeuralNet:
