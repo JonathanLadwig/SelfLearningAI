@@ -7,6 +7,8 @@ secondMove = np.zeros((9,9))
 game = StacTacToe(epoch)
 inputArrays = game.getInputs()
 outputArrays = game.getOutputs()
+
+#runs the prediction matrix for the first two moves
 for i in range(epoch):
     inputs = inputArrays[i]
     if outputArrays[i] == 1:
